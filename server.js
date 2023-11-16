@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const userRoutes = require('./routes/userroutes');
@@ -7,7 +8,7 @@ const app = express();
 
 app.use(express.json());
 
-mongoose.connect(`mongodb+srv://${process.env.MOGNO_USER}:${process.env.MONGO_PW}@cluster0.op23t.mongodb.net/social_db`)
+mongoose.connect(`mongodb+srv://fsolleder3:fred1231@cluster0.op23t.mongodb.net/social_db`)
 .then(() => console.log('MongoDB Connected'))
 .catch(err => console.error('MongoDB connection error:', err));
 
